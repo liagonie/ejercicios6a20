@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tarea 9</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <script>
+       function botonG(){     
+       var gen=prompt("¡Conoce tu generación! si/no")
+       //iba a escoger un if para que el usuario solo ingresara su fecha pero pues tiene que ser forzosamente un do ya que tiene que pedir cambio de fecha
+       if(gen=="si"){
+           do{
+        var fecha=prompt("¿En que año naciste?");
+
+        if (fecha>=1994 && fecha<=2010){
+			alert("Perteneces a la generación Z")
+		}
+		
+		else if(fecha>=1981 && fecha<=1993){
+			alert("Perteneces a la generación Y")
+		}
+		
+		else if (fecha>=1969 && fecha<=1980){
+			alert("Perteneces a la generación X")
+		}
+		else if(fecha>=1949 && fecha<=1968){
+			alert("Perteneces a la generación Baby Boom ")
+		}var gen=prompt("Quiere conocer otra fecha?")
+
+           } while(gen=="Si");
+       }
+        else{
+			("Fecha no valida")
+		}
+       }
+        </script>
+    </head>
+    <body>
+        <a href="index.html"><button>Volver al inicio</button></a><br>
+        <input type="button" value="Clic Generacional" onclick="botonG();">
+    </body>
+</html>

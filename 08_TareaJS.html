@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tarea 8</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <script>
+        
+        function botonH(){   
+        var ice=20;
+        var topp=prompt("Usted lleva 1 helado, quiere agregar un topping? si/no")
+        
+    //If para comparar el tipo, si el usuario desea un ingrediente extra, usé un do para que el cliente pueda cambiar de opción con while, de lo contrario solo se cobra el helado.
+     if(topp=="si"){
+        do{
+            var tipo=prompt("Escriba la opción de su preferencia\nOreo\nKitkat\nCajeta\nChoconuez")
+            var subtotal="";
+            
+            switch(tipo){
+			case "oreo":
+            total=ice+10;
+			subtotal="Su pago será de $"+total;
+			break;
+
+			case "kitkat":
+            total=ice+15;
+			subtotal="Su pago será de $"+total;
+			break;
+                        
+            case "cajeta":
+            total=ice+10;
+			subtotal="Su pago será de $"+total;
+			break;
+            
+            case "choconuez":
+            total=ice+20;
+			subtotal="Su pago será de $"+total;
+			break;
+
+			default:
+			subtotal="Opción no disponible";
+		}     //se pregunta si quiere cambiar el topping
+            var topp=prompt("Desea cambiar su elección")
+            }
+          while(topp=="si");
+            	alert(subtotal);
+            } 
+         else{
+                document.write("Su pago será de $20")
+            }
+     } 
+        </script>
+    </head>
+    <body>
+         <input type="button" value="Escoge tu helado" onclick="botonH();"><br>
+         <a href="index.html"><button>Volver al inicio</button></a>
+    </body>
+</html>

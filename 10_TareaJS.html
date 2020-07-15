@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tarea 10</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    <script>
+     function botonV(){        
+     var viaje=prompt("¿Quieres viajar? si/no")
+     if(viaje=="si"){
+         //do para que elusuario siga escogiendo hasta que el mismo diga que no
+        do{
+            var mes=prompt("Ingrease un mes para viajar")
+            var impr="";
+            switch(mes){
+			case "enero":
+            case "febrero":
+            case "marzo":
+            case "abril":
+            case "mayo":
+            case "junio":
+            case "Agosto":
+			impr="Disponible:\nCancun: $7000\nDisneyland: $12,000\nIxtapa: $5000\nLas Vegas: $12,000";
+			break;
+            //break para cambiar el ciclo en el mismo mensaje       
+            case "julio":
+            case "septiembre":
+            case "octubre":
+            case "noviembre":
+            case "diciembre":
+			impr="Disponible:\nCancun: $10,000\nDisneyland: $20,000\nIxtapa: $8000\nLas Vegas: $18,000";
+			break;
+
+			default:
+			impr="Mes no valido";
+                        
+		}
+            var viaje=prompt("¿Quieres agregar otro mes? si/no")
+            }
+          while(viaje=="si");
+            	alert(impr);
+            } 
+         else{
+                document.write("Buena elección")
+            }
+        }
+        </script>
+    </head>
+    <body>
+         <a href="index.html"><button>Volver al inicio</button></a><br>
+        <input type="button" value="Clic para viajar" onclick="botonV();">
+    </body>
+</html>

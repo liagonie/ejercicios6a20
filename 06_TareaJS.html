@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tarea 6</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        
+         <script>
+         function boton(){
+        
+		var suma=0,uno,inicio=1;
+             //for para establecer un limite de 100 e iniciar en uno con un acumulador
+           for (uno=1; uno<=100; uno++){
+               //If para dividir y sacar los numeros pares
+                if(uno %2==0){
+
+                    alert("Es un número par:"+uno+"\nSus numeros pares son:"+inicio++);
+                    
+                    //El acumulador se activa aqui
+                    suma=suma+uno;
+               alert("La suma de estos es: "+suma);
+                }
+           }
+
+         }
+        </script>
+    </head>
+    <body>
+        <a href="index.html"><button>Volver al inicio</button></a><br>
+        <input type="button" value="Numeros pares del 1 al 100" onclick="boton();">
+    </body>
+</html>
